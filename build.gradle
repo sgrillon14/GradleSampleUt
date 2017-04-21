@@ -8,7 +8,7 @@ plugins {
 sonarqube {
     properties {
         property "sonar.projectName", "Java :: Simple Project :: SonarQube Scanner for Gradle"
-        property "sonar.projectKey", "com.github.sgrillon14:GradleSampleUt"
+        property "sonar.projectKey", "com.github.sgrillon14:gradlesampleut"
         property "sonar.jacoco.reportPath", "${project.buildDir}/jacoco/test.exec"
     }
 }
