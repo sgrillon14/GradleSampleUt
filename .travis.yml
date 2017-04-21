@@ -4,6 +4,7 @@ install: true
 
 before_install:
 - chmod +x ./travis.sh
+- chmod +x ./gradlew
 
 script:
   - ./travis.sh
