@@ -3,7 +3,7 @@ sudo: false
 install: true
 
 before_install:
-- chmod +x ./travis
+- chmod +x ./travis.sh
 
 script:
   - ./travis.sh
