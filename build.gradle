@@ -1,41 +1,21 @@
-// Uses DSL plugins resolution introduced in Gradle 2.1
 plugins {
-  id "java"
-  id "jacoco"
-  id "org.sonarqube" version "1.2"
+    id "org.sonarqube" version "2.2"
 }
 
-sonarqube {
-    properties {
-        property "sonar.projectName", "Java :: Simple Project :: SonarQube Scanner for Gradle"
-        property "sonar.projectKey", "com.github.sgrillon14:gradlesampleut"
-        property "sonar.jacoco.reportPath", "${project.buildDir}/jacoco/test.exec"
-    }
-}
+apply plugin: 'java'
+apply plugin: 'jacoco'
 
-allprojects {
-  ext.baseVersion = "0.1"
-  ext.snapshotVersion = true
-
-  group = "com.github.sgrillon14"
-  version = "$baseVersion" + (snapshotVersion ? "-SNAPSHOT" : "")
-}
-
-test {
-  ignoreFailures = true
+repositories {
+    jcenter()
 }
 
 dependencies {
     testCompile 'junit:junit:4.12'
 }
 
-repositories {
-  repositories {
-    maven {
-      url "http://repo1.maven.org/maven2/"
+sonarqube {
+    properties {
+        property "sonar.projectName", "Java Gradle-based project analyzed on SonarQube.com using Travis"
+        property "sonar.projectKey", "com.sonarqube.examples.java-gradle-travis-project"
     }
-    maven {
-      url "https://plugins.gradle.org/m2/"
-    }
-  }
 }
