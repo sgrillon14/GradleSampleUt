@@ -17,7 +17,7 @@ allprojects {
   ext.baseVersion = "0.1"
   ext.snapshotVersion = true
 
-  group = "org.sonarqube"
+  group = "com.github.sgrillon14"
   version = "$baseVersion" + (snapshotVersion ? "-SNAPSHOT" : "")
 }
 
