@@ -15,7 +15,7 @@ dependencies {
 
 sonarqube {
     properties {
-        property "sonar.projectName", "Java Gradle-based project analyzed on SonarQube.com using Travis"
-        property "sonar.projectKey", "com.github.sgrillon14.gradlesampleut"
+        property "sonar.projectName", "gradlesampleut"
+        property "sonar.projectKey", "com.github.sgrillon14:gradlesampleut"
     }
 }
