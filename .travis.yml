@@ -3,10 +3,6 @@ language: java
 addons:
   sonarqube: true
 
-before_install:
-- chmod +x ./travis.sh
-- chmod +x ./gradlew
-
 after_success:
   gradle check
   gradle sonarqube -Dsonar.host.url=$SONAR_HOST_URL -Dsonar.login=$SONAR_TOKEN -Dsonar.verbose=true
